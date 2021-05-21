@@ -1,6 +1,6 @@
 package com.cinus.basic.observer;
 
-public class DeviceManager extends Observable<DeviceManager, BizObserver, DeviceState>{
+public class DeviceManager extends Observable<DeviceManager, BizObserver, DeviceState> {
 
     private DeviceState deviceState = DeviceState.INACTIVE;
 

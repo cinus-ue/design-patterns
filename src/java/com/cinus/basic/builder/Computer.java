@@ -1,10 +1,10 @@
 package com.cinus.basic.builder;
 
 public class Computer {
-    private  String memory;
-    private  String storage ;
-    private  String display;
-    private  String os;
+    private String memory;
+    private String storage;
+    private String display;
+    private String os;
     private String model;
 
     private Computer(Builder builder) {
@@ -41,6 +41,7 @@ public class Computer {
             }
             this.model = model;
         }
+
         public Builder memory(String memory) {
             this.memory = memory;
             return this;

@@ -1,6 +1,6 @@
 package com.cinus.basic.observer;
 
-public class OnlineObserver implements BizObserver{
+public class OnlineObserver implements BizObserver {
 
     @Override
     public void notify(DeviceManager subject, DeviceState argument) {

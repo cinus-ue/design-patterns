@@ -9,7 +9,7 @@ public class AutomaticWeapon implements Weapon {
 
     @Override
     public void fire() {
-        for (Automatic automatic:automatics) {
+        for (Automatic automatic : automatics) {
             automatic.autorun();
         }
     }

@@ -1,7 +1,7 @@
 package com.cinus.basic.observer;
 
 public enum DeviceState {
-    ACTIVE,INACTIVE;
+    ACTIVE, INACTIVE;
 
     @Override
     public String toString() {

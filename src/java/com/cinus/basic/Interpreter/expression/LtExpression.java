@@ -20,6 +20,6 @@ public class LtExpression extends Expression {
 
     @Override
     public String toString() {
-        return expr1.toString()+" < " + expr2.toString();
+        return expr1.toString() + " < " + expr2.toString();
     }
 }
