@@ -6,15 +6,18 @@ import com.cinus.business.filterchain.filter.LoggingFilter;
 
 public class Server {
 
-    private Controller controller;
-    private FilterManager filterManager;
+    private Controller controller = new Controller();
+    private FilterManager filterManager = new FilterManager();
 
-    public Server() {
-        this.controller = new Controller();
-        this.filterManager = new FilterManager();
+    public void init() {
         filterManager.addFilter(new AuthenticationFilter());
         filterManager.addFilter(new LoggingFilter());
     }
+
+    public void disableFilter() {
+        filterManager.disable();
+    }
+
 
     public void receive(String request) {
         filterManager.filter(request);

@@ -2,13 +2,11 @@ package com.cinus.business.controller;
 
 public class Controller {
 
-    private Dispatcher dispatcher;
+    private Dispatcher dispatcher = new Dispatcher();
 
     public Controller() {
-        dispatcher = new Dispatcher();
         dispatcher.register(new HomeView());
     }
-
 
     private boolean isAuthenticated(String request) {
         return true;
