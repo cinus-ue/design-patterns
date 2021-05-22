@@ -3,7 +3,7 @@ package com.cinus.business.delegate;
 import com.cinus.business.delegate.service.BusinessService;
 
 public class BusinessDelegate {
-    private BusinessLookUp businessLookUp = new BusinessLookUp();
+    private ServiceLookup serviceLookUp = new ServiceLookup();
     private BusinessService businessService;
     private ServiceType serviceType;
 
@@ -16,7 +16,7 @@ public class BusinessDelegate {
     }
 
     public void doTask() {
-        businessService = businessLookUp.getBusinessService(serviceType);
+        businessService = serviceLookUp.lookupService(serviceType);
         businessService.processing();
     }
 }

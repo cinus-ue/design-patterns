@@ -6,9 +6,9 @@ import com.cinus.business.delegate.service.RPCService;
 
 import java.util.Objects;
 
-public class BusinessLookUp {
+public class ServiceLookup {
 
-    public BusinessService getBusinessService(ServiceType serviceType) {
+    public BusinessService lookupService(ServiceType serviceType) {
         Objects.requireNonNull(serviceType);
         switch (serviceType) {
             case RPC:
