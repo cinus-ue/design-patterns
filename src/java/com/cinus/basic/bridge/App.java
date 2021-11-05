@@ -1,8 +1,18 @@
 package com.cinus.basic.bridge;
 
 public class App {
+
     public static void main(String[] args) {
-        AutomaticWeapon automaticGuidanceWeapon = new AutomaticWeapon(new Automatic[]{new AutomaticGuidance()});
-        automaticGuidanceWeapon.fire();
+        Shape[] shapes = new Shape[]{
+                new CircleShape(1, 2, 3, new DrawingAPI1()),
+                new CircleShape(5, 7, 11, new DrawingAPI2())
+        };
+
+        for (Shape shape : shapes) {
+            shape.resizeByPercentage(2.5);
+            shape.draw();
+        }
     }
+
+
 }
